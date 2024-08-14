@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Document</title>
+</head>
+<body>
+
+  <h2>Listagem</h2>
+
+  <p>Aqui fica as transações do PYCHARM</p>
+
+  <ul>
+  {% for transacao in transacoes %}
+    <li><a href="{% url 'url_update' transacao.id %}">{{ transacao.descricao }} - {{ transacao.data }} - {{ transacao.valor }} - {{ transacao.categoria }}</a></li>
+  {% endfor %}
+  </ul>
+
+
+
+  <button></button>
+  <a href="{% url 'url_nova' %}">Mais um</a>
+
+
+
+</body>
+</html>
+
